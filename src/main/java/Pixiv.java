@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
 public class Pixiv {
     public static void main(String[] args) throws IOException, InterruptedException {
         //region 代理设置
-        //代理地址和端口
+        //代理地址和端口 todo 换成你的代理
         String proxyHost = "127.0.0.1";
         String proxyPort = "7890";
         //http开启代理
@@ -56,12 +56,12 @@ public class Pixiv {
                     .addHeader("accept", "application/json")
                     .addHeader("sec-ch-ua-mobile", "?0")
                     .addHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36")
-                    .addHeader("x-user-id", "23782095")
+                    .addHeader("x-user-id", "xxx")// todo 换成你的id
                     .addHeader("sec-ch-ua-platform", "\"Windows\"")
                     .addHeader("Sec-Fetch-Site", "same-origin")
                     .addHeader("Sec-Fetch-Mode", "cors")
                     .addHeader("Sec-Fetch-Dest", "empty")
-                    .addHeader("Cookie", "PHPSESSID=23782095_U5yMRHHVjmheTWEZYa6wMNLSOZ8iI4OV; __cf_bm=U8OVsOBYhcj57Foq0eoAwR79paBhqNZEfsuHtytAPlU-1641108789-0-AcvribCrcXqj+H5kmB3s1r8nx1+SXxU0LAJvS4PEs/FyesbGHbyMrcFgrcV54fssZy9k6iDhr1CS9TtIMyV/m3kTUzRWfOnmJEVjbKDo4a6c; a_type=0; b_type=1; c_type=33; p_ab_d_id=1430675238; p_ab_id=7; p_ab_id_2=7; privacy_policy_agreement=3; privacy_policy_notification=0; first_visit_datetime_pc=2022-01-02+14%3A17%3A42; yuid_b=QGmIM1Q")
+                    .addHeader("Cookie", "xxx")// todo 换成你的 Cookie
                     .build();
             Response response = client.newCall(request).execute();
 
